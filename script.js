@@ -14,15 +14,15 @@
  *   (See below for drill-specific resources)
  */
 
-function addName() {
-  console.log('addName() ran');
+  function addName() {
+    console.log('addName() ran');
 
   // See:
   // - https://www.digitalocean.com/community/tutorials/js-innertext-and-innerhtml
   // - https://www.w3schools.com/jsref/prop_node_innertext.asp
 
   let nameElement = document.querySelector('#name');
-  nameElement.innerText = 'See script.js!';
+  nameElement.innerText = 'Young Dog';
 }
 
 function addFavoriteThings() {
@@ -31,6 +31,13 @@ function addFavoriteThings() {
   // 1. Get a reference to <ul id="favthings">
   // 2. Create a few list items representing your favorite things
   // 3. Add them to append them to favthings
+
+  let li = document.createElement('li')
+  li.textContent= 'Treats'
+  addFavoriteThings.
+  addFavoriteThings.
+
+
 
   // See:
   //   - https://htmldog.com/guides/javascript/advanced/creatingelements/
