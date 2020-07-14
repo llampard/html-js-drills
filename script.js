@@ -32,24 +32,38 @@ function addFavoriteThings() {
   // 2. Create a few list items representing your favorite things
   // 3. Add them to append them to favthings
 
-  let li = document.createElement('li')
-  li.textContent= 'Treats'
-  addFavoriteThings.
-  addFavoriteThings.
 
+  let li = document.createElement('li');
+  li.textContent = "Treats" ;
+  
+  let li2 = document.createElement('li');
+  li2.textContent = "Walks";
+
+  let li3 = document.createElement('li');
+  li3.textContent= "Tennis Balls";
+  
+
+  const favthings = document.querySelector('#favthings');
+    favthings.appendChild(li);
+    favthings.appendChild(li2);
+    favthings.appendChild(li3);
+}
 
 
   // See:
   //   - https://htmldog.com/guides/javascript/advanced/creatingelements/
   //   - https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
   //   - https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-}
+
 
 function replaceImage() {
   console.log('Called replaceImage()');
 
   // Change the puppy picture to a picture of your choosing
 
+let newImage = document.querySelector('#picture'); 
+ newImage.src = "https://images.ctfassets.net/440y9b545yd9/2aN6iCO7gd3qTpA6Rhoy00/8ce2220559c68b9c8b2d67c001f0893b/most-common-puppy-incidents-hero850.jpg";
+ newImage.height = "200";
   // See:
   // - https://www.tutorialrepublic.com/javascript-tutorial/javascript-dom-get-set-attributes.php
   // - https://www.w3schools.com/jsref/met_element_setattribute.asp
@@ -57,6 +71,14 @@ function replaceImage() {
 
 function changeCodeStatus() {
   console.log('Called changeCodeStatus()');
+
+  let codeImage = document.createElement('img');
+  codeImage.src = "https://sayingimages.com/wp-content/uploads/can-i-puppy-memes-1024x780.jpg";
+  codeImage.height= "300";
+  codeImage.width = "400";
+  
+  const sweetmeme = document.querySelector('#codestatus');
+  sweetmeme.replaceChild(codeImage, sweetmeme.childNodes[0]);
 
   // 1. Get a reference to <div id="codestatus">
   // 2. Create image element containing a sweet ol' meme
@@ -66,7 +88,7 @@ function changeCodeStatus() {
 // Get a reference to the button w/ id="show-info-button"
 let showInfoButton = document.querySelector('#show-info-button');
 
-// Do something when showInfoButton is clicke
+// Do something when showInfoButton is clicked
 showInfoButton.addEventListener('click', function() {
   console.log('Clicked "Show Info" button');
 
@@ -95,7 +117,16 @@ let informationForm = document.querySelector('#information-form');
 informationForm.addEventListener('submit', function(event) {
   event.preventDefault(); // You will want this here. Remove it and see what changes.
 
+  //let submitInfo = document.querySelector('#information-form');
+  //let infoSubmitted = "";
+  //let i;
+  //for (i=0; i < submitInfo.length; i++){
+   // infoSubmitted = infoSubmitted + submitInfo.elements[i].value + "<br>";
+  //}
+
   console.log('Form submitted');
+
+ 
 
   // Your job:
   //   1. Get information typed into the form
