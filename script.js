@@ -126,7 +126,33 @@ informationForm.addEventListener('submit', function(event) {
 
   console.log('Form submitted');
 
+   let fname = document.querySelector("#fname").value;
+   console.log(fname);
+   document.querySelector("#firstname").innerHTML = fname;
+
+  document.querySelector("#firstname").innerHTML = document.querySelector("#fname").value;
+  document.querySelector("#lastname").innerHTML = document.querySelector("#lname").value;
+  document.querySelector("#chosencar").innerHTML = document.querySelector("#cars").value;
+  document.querySelector('input[name="icecream]:checked').value;
+  document.querySelector("#").innerHTML = document.querySelector("#cars").checked;
+
  
+  let isHuman = document.querySelector("#humancheck").checked;
+  let isCoder = document.querySelector("#codercheck").checked;
+
+    if (isHuman){
+      document.querySelector("#checks").append("This person is a human");
+    }
+
+    if (isCoder){
+      document.querySelector("#checks").append("This person is a coder");
+    }
+
+//console.log(document.querySelector("#cars").value);
+
+
+
+
 
   // Your job:
   //   1. Get information typed into the form
@@ -135,6 +161,10 @@ informationForm.addEventListener('submit', function(event) {
   // Google things like:
   //   javascript form element get values
 });
+function getValue(){
+
+
+}
 
 /*************************************
  * Section 3 - Clicks and Keypresses *
