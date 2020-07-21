@@ -35,13 +35,13 @@ function addFavoriteThings() {
 
   let li = document.createElement('li');
   li.textContent = "Treats" ;
-  
+
   let li2 = document.createElement('li');
   li2.textContent = "Walks";
 
   let li3 = document.createElement('li');
   li3.textContent= "Tennis Balls";
-  
+
 
   const favthings = document.querySelector('#favthings');
     favthings.appendChild(li);
@@ -61,7 +61,7 @@ function replaceImage() {
 
   // Change the puppy picture to a picture of your choosing
 
-let newImage = document.querySelector('#picture'); 
+let newImage = document.querySelector('#picture');
  newImage.src = "https://images.ctfassets.net/440y9b545yd9/2aN6iCO7gd3qTpA6Rhoy00/8ce2220559c68b9c8b2d67c001f0893b/most-common-puppy-incidents-hero850.jpg";
  newImage.height = "200";
   // See:
@@ -76,7 +76,7 @@ function changeCodeStatus() {
   codeImage.src = "https://sayingimages.com/wp-content/uploads/can-i-puppy-memes-1024x780.jpg";
   codeImage.height= "300";
   codeImage.width = "400";
-  
+
   const sweetmeme = document.querySelector('#codestatus');
   sweetmeme.replaceChild(codeImage, sweetmeme.childNodes[0]);
 
@@ -136,7 +136,7 @@ informationForm.addEventListener('submit', function(event) {
   document.querySelector('input[name="icecream]:checked').value;
   document.querySelector("#").innerHTML = document.querySelector("#cars").checked;
 
- 
+
   let isHuman = document.querySelector("#humancheck").checked;
   let isCoder = document.querySelector("#codercheck").checked;
 
@@ -222,6 +222,16 @@ document.addeventListener('keydown', function() {
  *   it is next to.
  */
 
+ document.querySelector(".form").addEventListener("submit",function(event){
+   event.preventDefault();
+   let todo = document.querySelector("#todo").value;
+   console.log(todo);
+
+   let li = document.createElement("li");
+   li.innerHTML=todo;
+
+   document.querySelector("#todos").appendChild(li)
+ })
 // Your code goes here
 
 /****************************************
@@ -240,6 +250,17 @@ document.addeventListener('keydown', function() {
  *   - https://javascript.info/settimeout-setinterval
  *
  */
+
+ let startTime = Date.now();
+
+ setInterval(function() {
+   let currentTime = Date.now();
+   let diffInSeconds = (currentTime - startTime) / 1000;
+
+   let secondsOutput = document.querySelector("#seconds");
+
+   secondsOutput.innerText = diffInSeconds.toFixed(1);
+ }, 20);
 
 // Your code goes here
 
